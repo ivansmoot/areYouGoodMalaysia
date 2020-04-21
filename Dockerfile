@@ -6,6 +6,6 @@ COPY . /app
 WORKDIR /app
 EXPOSE 80
 RUN npm install
-RUN npm run build
+# RUN npm run build
 RUN npm run js
 CMD ["npm", "start"]
