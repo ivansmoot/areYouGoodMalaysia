@@ -1,0 +1,7 @@
+[auth]
+token=effa1c7f668c4991a1eae660e56ea2e07ddfa436a25f40a4ad242bfb3e46f163
+
+[defaults]
+url=https://sentry.io/
+org=versa-f4
+project=areyougoodmalaysia

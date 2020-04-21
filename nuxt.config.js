@@ -24,14 +24,14 @@ export default {
   */
   css: [
     'element-ui/lib/theme-chalk/index.css',
-    './static/css/bootstrap.min.css',
-    './static/css/floating-labels.css'
+    './static/css/bootstrap.min.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    '@/plugins/vue-echarts'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -44,7 +44,12 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/sentry'
   ],
+  sentry: {
+    dsn: 'https://7875761f76d6423197bd28d911e2f632@o376878.ingest.sentry.io/5206754',
+    config: {}
+  },
   /*
   ** Build configuration
   */
@@ -54,6 +59,12 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    }
+  },
+  router: {
+    middleware: 'route', // 即每次路由跳转会调用该中间件
+    scrollBehavior (to, from, savedPosition) {
+      return { x: 0, y: 0 }
     }
   }
 }

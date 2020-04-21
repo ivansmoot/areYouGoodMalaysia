@@ -14,7 +14,8 @@
       <a v-show="login" class="btn btn-outline-primary" @click="logout">log out</a>
     </div>
 
-    <router-view @transfer="islogin" @transfer2="username" />
+    <!-- <router-view @transfer="islogin" @transfer2="username" /> -->
+    <nuxt-child @transfer="islogin" @transfer2="username" />
 
     <footer class="footer py-5">
       <div class="row">
@@ -126,10 +127,10 @@ export default {
       })
     },
     tologin () {
-      this.$router.push('/login')
+      this.$router.push('/firstpage/login')
     },
     tochat () {
-      this.$router.push('/chat')
+      this.$router.push('/firstpage/chat')
     },
     abug () {
       this.$router.commit('wrongcommit')
@@ -147,6 +148,7 @@ body,#__nuxt,#__layout,#__layout{
   width: 100%;
   margin: 0;
   padding: 0;
+  background-color: white;
 }
 .btn-outline-primary:hover {
   color: #fff;
