@@ -23,3 +23,4 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 > 最近在从spa迁移到ssr上，不知道能不能成功哦
 > 今天凌晨4点多，vue3正式beta了，希望cli赶紧安排上，文档也安排上
+>
