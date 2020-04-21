@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crazydave-deployment2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: nginx2
+  template:
+    metadata:
+      labels:
+        name: nginx2
+    spec:
+      containers:
+      - name: nginx
+        image: registry.cn-shanghai.aliyuncs.com/ivansmoot/crazy-dave:0.1.0
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80

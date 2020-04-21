@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-chart
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: my-chart
+  template:
+    metadata:
+      labels:
+        name: my-chart
+    spec:
+      containers:
+      - name: my-chart
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
+          protocol: TCP
