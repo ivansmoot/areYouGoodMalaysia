@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "js": "json-server --watch db.json"
   },
   "dependencies": {
     "@nuxtjs/sentry": "4.0.1",
