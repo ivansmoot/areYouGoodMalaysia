@@ -4,7 +4,7 @@ ENV HOST 0.0.0.0
 RUN mkdir -p /app
 COPY . /app
 WORKDIR /app
-EXPOSE 80
+EXPOSE 7777
 RUN npm install
 # RUN npm run build
 # RUN npm run js
